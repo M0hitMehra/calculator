@@ -1,0 +1,236 @@
+body {
+    background-color: rgb(108, 105, 105);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 2px solid black;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    border-radius: 10px;
+    box-shadow: 13px 13px 15px white , -13px -13px 15px white;
+}
+
+.container>div:first-child {
+    /* border: 2px solid white; */
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 2;
+    position: relative;
+    overflow: auto;
+    padding: 2px;
+     border-bottom: 2px solid black;
+    background: #533c1f;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+
+.screen h1 {
+    position: absolute;
+    font-size: 2.5rem;
+    bottom: 0%;
+    right: 0;
+    padding: 2rem;
+    color: white;
+
+}
+
+.container>div:last-child {
+    /* border: 2px solid tomato; */
+    grid-column: 1 / span 4;
+    grid-row: 3 / span 4;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    border-radius: 10px;
+
+}
+
+.control>div:first-child {
+    /* border: 2px solid yellow; */
+    grid-column: 1 /span 3;
+    grid-row: 1 / span 4;
+    display: grid;
+    grid-template-areas:
+        "one two three"
+        "four five six"
+        "seven eight nine"
+        "decimal zero clear"
+    ;
+    padding: 1rem;
+    align-items: center;
+    column-gap: 4rem;
+    row-gap: 2rem;
+    justify-content: center;
+    border-bottom-left-radius: 10px;
+    background: #191a1a;
+    border-right: 2px solid black;
+}
+
+.numpad div:first-child {
+    grid-area: one;
+}
+
+.numpad>div:nth-child(2) {
+    grid-area: two;
+
+}
+
+.numpad>div:nth-child(3) {
+    grid-area: three;
+
+}
+
+.numpad>div:nth-child(4) {
+    grid-area: four;
+
+}
+
+.numpad>div:nth-child(5) {
+    grid-area: five;
+
+}
+
+.numpad>div:nth-child(6) {
+    grid-area: six;
+
+}
+
+.numpad>div:nth-child(7) {
+    grid-area: seven;
+
+}
+
+.numpad>div:nth-child(8) {
+    grid-area: eight;
+
+}
+
+
+.numpad>div:nth-child(9) {
+    grid-area: nine;
+
+}
+
+.numpad>div:nth-child(10) {
+    grid-area: decimal;
+
+}
+
+.numpad>div:nth-child(11) {
+    grid-area: zero;
+
+}
+
+
+.numpad div:last-child {
+    grid-area: clear;
+
+}
+
+.nums{
+    border: 2px solid white;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding-right: 10px;
+    padding-left: 10px;
+    background: slategray;
+    box-shadow: 2px 2px 5px white;
+}
+
+.nums:hover{
+    box-shadow: 2px 2px 35px white;
+}
+.clicked{
+    transform: scale(0.5);
+    transition: transform 0.1s linear;
+}
+
+.numpad div {
+    cursor: pointer;
+}
+
+.operations div {
+    cursor: pointer;
+}
+
+.control>div:last-child {
+    /* border: 2px solid red; */
+    grid-column: 4/span 2;
+    grid-row: 1 / span 4;
+    display: grid;
+    grid-template-areas:
+        "add minus"
+        "multiply divide"
+        "mod delete"
+        "enter enter"
+    ;
+    padding: 1rem;
+    align-items: center;
+    column-gap: 5rem;
+    row-gap: 3rem;
+    justify-content: center;
+    border-bottom-right-radius: 10px;
+    background: #282a2b;
+}
+
+.operators{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding-right: 10px;
+    padding-left: 10px;
+    background: rgb(1, 9, 17);
+    box-shadow: 2px 2px 5px white;
+}
+.operations>div:first-child {
+    grid-area: add;
+}
+
+.nuoperationsmpad>div:nth-child(2) {
+    grid-area: minus;
+
+}
+
+.operations>div:nth-child(3) {
+    grid-area: multiply;
+
+}
+
+.operations>div:nth-child(4) {
+    grid-area: divide;
+
+}
+
+.operations>div:nth-child(5) {
+    grid-area: mod;
+
+}
+
+.operations>div:nth-child(6) {
+    grid-area: delete;
+
+}
+
+.operations>div:nth-child(7) {
+    grid-area: enter;
+    /* margin: auto; */
+    width: 90%;
+    height: 80%;
+
+}
